@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gmail and Classroom Management Extension</title>
+  <style>
+    body { width: 300px; padding: 10px; font-family: Arial, sans-serif; }
+    button { margin: 5px; padding: 8px; width: 100%; }
+    #templateList, #reminderList { margin-top: 10px; }
+    .item { margin-bottom: 5px; padding: 5px; background-color: #f0f0f0; display: flex; justify-content: space-between; align-items: center; }
+    .remove-btn { cursor: pointer; color: red; }
+    .sender-list { font-size: 0.8em; color: #666; }
+    .view-emails-btn, .add-sender-btn { cursor: pointer; color: blue; }
+    .classroom-reminder { background-color: #e6f3ff; }
+  </style>
+</head>
+<body>
+  <h2>Gmail and Classroom Management</h2>
+  <button id="createTemplate">Create Template</button>
+  <div id="templateList"></div>
+  <button id="createReminder">Create Reminder</button>
+  <button id="syncClassroom">Sync Classroom Assignments</button>
+  <div id="reminderList"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

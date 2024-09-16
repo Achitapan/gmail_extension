@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Gmail and Classroom Management Extension",
+    "version": "1.0",
+    "description": "Enhance Gmail with templates, sender tracking, and integrate with Google Classroom",
+    "permissions": [
+      "storage",
+      "alarms",
+      "notifications",
+      "identity"
+    ],
+    "host_permissions": [
+      "https://mail.google.com/*",
+      "https://classroom.googleapis.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://mail.google.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "oauth2": {
+      "client_id": "YOUR_CLIENT_ID_HERE",
+      "scopes": [
+        "https://www.googleapis.com/auth/classroom.courses.readonly",
+        "https://www.googleapis.com/auth/classroom.coursework.me.readonly"
+      ]
+    }
+  }
+  
